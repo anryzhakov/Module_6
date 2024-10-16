@@ -9,9 +9,6 @@ class Animal:
     def __init__(self, name):
         self.name = name
 
-
-class Mammal(Animal):
-
     def eat(self, food):
         #food.name = food <---- ВОТ ИЗ-ЗА ЭТОЙ СТРОЧКИ НЕ РАБОТАЛ ВЫВОД
         if food.edible:
@@ -22,30 +19,24 @@ class Mammal(Animal):
             print(f"{self.name} не стал есть {food.name}")
             self.alive = False  # живой
             self.fed = False  # накормленный
+
+
+class Mammal(Animal):
+    pass
+
 
 
 class Predator(Animal):
-    def eat(self, food):
-        #food.name = food <---- ВОТ ИЗ-ЗА ЭТОЙ СТРОЧКИ НЕ РАБОТАЛ ВЫВОД
-        if food.edible:
-            print(f"{self.name} съел {food.name}")
-            self.alive = True  # живой
-            self.fed = True  # накормленный
-        else:
-            print(f"{self.name} не стал есть {food.name}")
-            self.alive = False  # живой
-            self.fed = False  # накормленный
-
+    pass
 
 class Plant:
+    edible = False
 
     def __init__(self, name):
         self.name = name
 
-
 class Flower(Plant):
-    edible = False
-
+    pass
 
 class Fruit(Plant):
     edible = True
