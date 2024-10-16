@@ -3,7 +3,6 @@
 # Домашнее задание по теме "Зачем нужно наследование"
 
 class Vehicle:
-
     __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
 
     def __init__(self, owner, __model, __engine_power, __color):
@@ -28,8 +27,6 @@ class Vehicle:
         else:
             print(f'Нельзя сменить цвет на {new_color}')
 
-
-
     def print_info(self):
         print(self.get_model())
         print(self.get_horsepower())
@@ -38,6 +35,8 @@ class Vehicle:
 
 
 class Sedan(Vehicle):
+    __PASSENGERS_LIMIT = 5
+
     pass
 
 
